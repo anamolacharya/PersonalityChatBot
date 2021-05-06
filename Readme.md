@@ -47,11 +47,5 @@ pip install python-Levenshtein
 //  "project_id": "mimetic-codex-309523",
 //  "private_key_id": "4b649ecf12a1e56a37e1a2005ea714e737f873ca",
 //  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCNw9SW64IBq9Ek\n0Wn8JdhJ7eeFIowQSpfNQ0j0QjooZzB43gAEUbg5AaowZFFPGQTx+rzjyAAXskqy\nTDKlvt9qUuDPkPICqCvV0plUyZPJg6dbUJk3oHtIx2bHm7g7mim1TXG2iC1/1+tU\naY8uKaAIW2EXyRgDAHjVQiTumwLbZKuvoZyTL9mLPlBFTWVUupl3l/pvlN3HLLER\nX4vOT6UoapkPuh+WOfWSUGU4dtJCA63+RxtgH1+DfN3ApMni+XMxtEIInYO/FxTd\nkN2ISKjj5rf/if0laUxpcAvSAnqgjIClDSiogGc0XZKp1PyI+Ycer/f1o0kmTo/j\naR2L8lBfAgMBAAECggEAAVXyh1eBupVNW6zzdDJBFvU8ZLc+HZsuUftL0S1ckevi\n+4iP9Hp2o2beHSWc1IN2VfdYV0cXpSGDbamlIoWpYj2Uq7AAb8D45MNeuXtKvq/U\nYFpijzEeaEGkuMXBVyJtOS2ZIDCpSRaWO43hEPzIaru9rvUwmjqjaNL+ORdR0BJf\nqjwr+86L519jKqokcYF2St7e6hLsV9zC0skX+6Q9DhAq2YDK7fMEt8ZzjjwkmMM2\nOVcaZYawrCKLj7xNIQTExvAM1X3deloCk2u8jfb5QH0MjPXB3rIWO0xsspoc3Udd\nIM83+rBaH5OaUPtlTDj1PFV6osYdLQ39uP/yu9o20QKBgQDEyEFY2TaxIzN3326n\nhifza7ulsmJEVHOq4LAjppAbg93KPpOLc3DZabEC0sAdxaSkRCo1kXCmF1O51w4a\nuAK4sJc+9XYpnefi1HnrWcOEiLJblFn7WniNVII+D1DIKOWuzTW8lwgKe94sQqaa\nIfPdjwFtKfVMdph/1kq+0brY7wKBgQC4bSTjwt/IDSE3UGQwlTGDtLt2IqDpIqqk\n8/v97TOJhIkc5Mi0lGaUQ3/yYoWlzr5lU5PIUab47MvHjZwhQCZINBLzGKr+AQ9N\noiVCUYo8ALPTmvF6CflGfOwlo6362w4WYipsunq4XxAhjGev4QIn4rcNskl5Mjul\n7IDxJ6+fkQKBgQCBj0ufANyGgiOn3/7N44E4Po08ihcy39uL/QVbY5Xr18VWHB8u\nqGH7cx/tOO7uayt8T7jurgRaBm/EorgRlWeNTA84j4ot2l5LNRPUhbQ59Xpg22rn\nF+jZPHPIAnNwZaTbkxa3RUUxCd78iyF/x6z1CeupgP+VSVwchu2Ndy6rFwKBgE0G\n6N1nyudW9ISRwwa3iVKk7ZbNp783h2YVsS3BIEFTZaD3vQwO3zkVaB7oH0G9M7BG\nU/bag457+DCEaK1KibKmbTOzHdewwZ9/FWi5fa7J7FF46Vo7SC20hzzBPC0FyMB4\nh5eZ2x+eNLKOXdALfkcCXcoOqLlBzb/jI4eVN7jBAoGACc9upd4eNtn8C8W/Vi9L\nmO6bv7ZCiuUlw0jGbzzJfIcqKa1aUSsQrpa6aG6SSfov+60Je4TuXdjp+iYGyM0V\nxklLtrRY77AdMjyGRbHwxcx89tiP1NyKOYR9sMYt8TEMCofq1c0/2ymXOvdyY//O\n3R+Coy18tIBDOV/mYuVxxq4=\n-----END PRIVATE KEY-----\n",
-//  "client_email": "wade-821@mimetic-codex-309523.iam.gserviceaccount.com",
-//  "client_id": "101860843833223217129",
-//  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-//  "token_uri": "https://oauth2.googleapis.com/token",
-//  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-//  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wade-821%40mimetic-codex-309523.iam.gserviceaccount.com"
-//}
+
 
