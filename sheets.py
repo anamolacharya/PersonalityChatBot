@@ -1,4 +1,14 @@
+#Author: Anamol Acharya, Stephen Paternoster, Wade Powell
+#Professor Akbar Siami-Namin
+#Texas Tech University
+#CS-4000 
+#Personality Trait Chat Bot- Neuroticism Focus
+
+
 import time
+
+
+
 
 
 #Gspread will import the google shee
@@ -16,8 +26,10 @@ from pprint import pprint
 scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/spreadsheets"
     ,"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 
+
 # setting up the credentials
 creds = ServiceAccountCredentials.from_json_keyfile_name("Credential.json", scope)
+
 #this will authorize the credential
 client = gspread.authorize(creds)
 
@@ -42,7 +54,7 @@ text = (row[7]+ " "+ row[8]  )
 doc = nlp(text)
 
 
-# Analyze syntax
+# Analyze syntax in terms of verbs, adjective, adverb, nouns
 
 noun_phrases = [chunk.text for chunk in doc.noun_chunks]
 print("Noun Phrases: ", noun_phrases)
@@ -82,23 +94,9 @@ nltk.download('stopwords')
 from parse import *
 
 
-#article_text = adj_str
 
 
-
-#
-# parsed_article = parse(text)
-#
-# paragraphs = parsed_article.find_all('p')
-#
-# article_text = ""
-#
-# for p in paragraphs:
-#     article_text += p.text
-
-
-
-#take the article for the URL
+#The given url is a article form wiipedia that is used to train the model using word2vec
 scrapped_data = urllib.request.urlopen('https://en.wikipedia.org/wiki/Neuroticism')
 article = scrapped_data .read()
 
@@ -120,6 +118,7 @@ all_sentences = nltk.sent_tokenize(processed_article)
 
 all_words = [nltk.word_tokenize(sent) for sent in all_sentences]
 
+#these are the list of the words that the highly neurotic person uses based on the trusted article and wikipedia
 list_of_comparisons = ["awful", "sick", "terribly", "cranky", "stress", "feeling",
                        'stressful', 'myself', 'though', 'feel', 'sweater', 'scenario',
                        'ashamed', 'feels', 'spoiled', 'sick', 'yay', 'possibly',
@@ -134,13 +133,8 @@ all_words.append(adv)
 all_words.append(list_of_comparisons)
 
 
-# Removing Stop Words
-from nltk.corpus import stopwords
-# for i in range(len(all_words)):
-#     all_words[i] = [w for w in all_words[i] if w not in stopwords.words('english')]
 
-
-
+#word2vec is imported as NLP Algorithm and used here to get the similarity between the user words and trained model.
 from gensim.models import Word2Vec
 word2vec = Word2Vec(all_words, min_count=1)
 
@@ -151,10 +145,11 @@ all_vector = word2vec.wv[user_words]
 neuro_score = 0
 
 
-#list_of_comparisons += all_words
 
+#This block of code is used to get the avg neuro score based on the similarity between user words and the trained model.
 total_neuro_score = 0
 count = 0
+#all the user words are being compared using for loop
 for w in list_of_comparisons:
     try:
         v1 = word2vec.wv[w]
@@ -186,23 +181,7 @@ except:
     print("The user is not neurotic.")
 
 
-
-#sim_words = word2vec.wv.most_similar("immature")
-
-
-#print(all_words)
-#print(sim_words)
-
-# Writing results back to Google Sheets
-
-#  while True:
-#      i = 1;
-#      val = sheet.cell(i, 9).value
-#      if(val != ""):
-#          i += 1
-#      else:
-#          time.sleep(60)
-#          sheet.update_cell(i, 9, avg_neuro_score)
-#          break;
+#this line of code will send the neuro score to the landbot chat interface through google spread sheets.
 sheet.update_cell(2, 10, avg_neuro_score)
+
 
